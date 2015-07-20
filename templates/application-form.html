@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application Form</title>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+	<form action="/application-form" method="post">
+		<label for= "field-firstname">First Name: </label>
+		<input type="text" name="firstname" id="field-firstname" placeholder="enter your first name">
+		<br>
+		<br>
+
+		<label for="field-lastname">Last Name: </label>
+		<input type="text" name="lastname" id="field-lastname" placeholder="enter your last name">
+		<br>
+		<br>
+
+		<label for="field-salary">Minimum Salary Requirement: </label>
+		<input type="number" name="salaryreq" id="field-salary" placeholder="enter number">
+		<br>
+		<br>
+
+		Which job are you applying for?
+			<select name="jobtype">
+				<option value="software engineer">Software Engineer</option>
+				<option value="qa engineer">QA Engineer</option>
+				<option value="product manager">Product Manager</option>
+			</select>
+		<br>
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

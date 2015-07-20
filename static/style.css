@@ -1,0 +1,31 @@
+#field-firstname, #field-lastname, form input[type="submit"] {
+	background-color: yellow;
+}
+
+#field-lastname {
+	font-weight: bold;
+}
+
+form {
+	border: 5px solid black;
+}
+
+
+
+
+/*Create a CSS file, styles.css, that stylizes application-form.html.
+
+Make sure to try some of the following:
+
+Changing the background color of all of the form input boxes and submit button
+to be yellow (can you do this for all input boxes without having to stylize each 
+one independently?)
+
+Changes the text in the last name field to be bolded 
+(hint: that’s the font-weight property).
+
+Draws a border around the instruction box.
+
+Have your HTML file use styles.css.
+
+*/
