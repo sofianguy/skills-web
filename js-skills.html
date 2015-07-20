@@ -63,7 +63,7 @@
   </style>
 </head>
 <body>
-
+<script src="https://code.jquery.com/jquery.js"></script>
 <h1>Skills&mdash;Javascript</h1>
 <p>
   For each numbered problem, fill in the corresponding <code>&lt;script&gt;</code> section in the
@@ -98,7 +98,11 @@
 
 <script>
   // code here for above problem
-  
+  function popUpAlert() {
+    alert("Show Me a Popup!");
+  }
+
+  popUpAlert();
 </script>
 
 
@@ -117,6 +121,14 @@
 
 <script>
   // code here for above-problem
+  var getGoodbye = document.getElementById("change-hello-to-goodbye-button");
+
+  function goodbye() {
+    getGoodbye.innerText = "goodbye";
+  }
+
+  getGoodbye.addEventListener('click', goodbye)
+
 </script>
 
 <div class="hint">
@@ -146,6 +158,14 @@
 
 <script>
   // code here for above problem
+  var popup = document.getElementById("prevent-form-submission-form");
+
+  function noSubmit(evt) {
+    alert("I'm an alert box!");
+    evt.preventDefault();
+  }
+
+  popup.addEventListener('submit', noSubmit);
 </script>
 
 <div class="hint">
@@ -175,6 +195,18 @@
 </fieldset>
 
 <script>
+// var value = element.getElementsByTagName("input").getAttribute("value");
+var value = "!nottuB"
+function reverseString() {
+  var reverseMsg = '';
+  for (var i = value.length -1; i >= 0; i--)
+    reverseMsg += value[i];
+  return alert(reverseMsg);
+}
+
+var button = document.getElementById('reverse-string-button');
+button.addEventListener('click', reverseString);
+
 //  Here's a stub of a function you can use!
 
 //  function reverseString() {
@@ -191,6 +223,7 @@
 
 //  var button = document.getElementById('reverse-string-button');
 //  button.addEventListener('click', reverseString);
+
 </script>
 
 
@@ -215,6 +248,11 @@
 
 <script>
   // code here for above problem
+  function alertBox() {
+    alert("Hello!");
+  }
+  
+  $('.tricky-to-find').on('click', alertBox);
 </script>
 
 <div class="hint">
@@ -242,6 +280,9 @@
 
 <script>
   // put your code here
+
+  $('img#kittenz-rule').dblclick('click', function() {$('img#kittenz-rule').attr('src', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRd5k0czkQ9uMA8SpYusbkRYnjSUr3nqwrijyx0Z7zVEaG9SWJn') });
+
 </script>
 
 <div class="hint">
@@ -269,12 +310,20 @@
 
 <fieldset>
   <img src="http://mytrial.typepad.com/.a/6a0147e199a17d970b0153906b3209970b-pi"
-      id="cute-porcupine-image" style="display: none">
+      id="cute-porcupine-image" style="display: none;">
   <input type="button" id="make-a-porcupine" value="I Want a Porcupine!">
 </fieldset>
 
 <script>
   // put your code here
+  
+  $('#make-a-porcupine').on('click', function() {
+        setTimeout(function() {
+          $('#cute-porcupine-image').fadeIn(1000)
+        }, 1000);
+      });
+
+
 </script>
 
 <div class="hint">
@@ -307,6 +356,10 @@
 
 <script>
   // put your code here
+  $('#agreeable-form').on('submit', function(evt) {
+      evt.preventDefault(); 
+      $('#agreeable-text').text("I like " + $('#favorite-food-input').val() + " too!");
+  });
 </script>
 
 <div class="hint">
